@@ -31,6 +31,27 @@ class StackAndQueuesTests {
         assertThat(result).isEqualTo(expected);
     }
 
+    @ParameterizedTest
+    @MethodSource("stoneWall")
+    void stoneWall(int[] input, int expected) {
+        int result = StoneWall.solution(input);
+        assertThat(result).isEqualTo(expected);
+    }
+
+    private static Stream<Arguments> stoneWall() {
+        return Stream.of(
+                Arguments.of(new int[]{8, 7, 7, 8, 9, 4, 5, 8, 8}, 7),
+                Arguments.of(new int[]{8, 8, 5, 7, 9, 8, 7, 4, 8}, 7),
+                Arguments.of(new int[]{8, 8, 8, 8, 1}, 2),
+                Arguments.of(new int[]{1}, 1),
+                Arguments.of(new int[]{}, 0),
+                Arguments.of(new int[]{1, 1, 1, 1, 1, 2, 1}, 2),
+                Arguments.of(new int[]{1, 1, 1, 1, 1, 3, 2}, 3),
+                Arguments.of(new int[]{8, 8, 8, 8, 1, 8}, 3),
+                Arguments.of(new int[]{Integer.MAX_VALUE}, 1)
+        );
+    }
+
     private static Stream<Arguments> nesting() {
         return Stream.of(
                 Arguments.of("(()(())())", 1),
