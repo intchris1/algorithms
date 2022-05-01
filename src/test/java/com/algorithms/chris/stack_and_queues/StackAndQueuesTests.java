@@ -24,6 +24,23 @@ class StackAndQueuesTests {
         assertThat(result).isEqualTo(expected);
     }
 
+    @ParameterizedTest
+    @MethodSource("nesting")
+    void nesting(String S, int expected) {
+        int result = Nesting.solution(S);
+        assertThat(result).isEqualTo(expected);
+    }
+
+    private static Stream<Arguments> nesting() {
+        return Stream.of(
+                Arguments.of("(()(())())", 1),
+                Arguments.of("())", 0),
+                Arguments.of("((((", 0),
+                Arguments.of("))))", 0),
+                Arguments.of("", 1)
+        );
+    }
+
     private static Stream<Arguments> fish() {
         return Stream.of(
                 Arguments.of(new int[]{4, 3, 2, 1, 5}, new int[]{0, 1, 0, 0, 0}, 2),
