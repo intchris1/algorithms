@@ -9,7 +9,7 @@ package com.algorithms.chris.max_slice_problem;
  * 1.2) Взять максимальное значение - либо число из пункта 1), либо само число на индексе i.
  * 2) Найти максимальное число среди всех таких maxEnding.
  * <p>
- * Given an array, find the maximum sum of elements of a subarray among all possible sub arrays.
+ * Given an array, find the maximum sum of elements of a sub array among all possible sub arrays.
  * <p>
  * 1) For each i, find the maximum sum among sub arrays that end at this index (maxEnding).
  * To calculate maxEnding:
