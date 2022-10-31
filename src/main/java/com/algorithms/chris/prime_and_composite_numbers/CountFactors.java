@@ -8,7 +8,7 @@ package com.algorithms.chris.prime_and_composite_numbers;
  * <p>
  * Count divisors of given number.
  * <p>
- * Optimized decision - check all numbers before sqrn(N), because each divisor has a symmetric divisor.
+ * Optimized solution - check all numbers before sqrn(N), because each divisor has a symmetric divisor.
  * One of them is less than sqrt(N), the other one is more than it.
  */
 public class CountFactors {
