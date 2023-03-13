@@ -3,7 +3,7 @@ package com.algorithms.chris.neetcode.two_pointers;
 /**
  * Проверить, валиндный ли палиндром (исключая не буквы и не цифры, в нижнем регистре)
  * Решение - использовать алгоритм two pointers.
- *
+ * <p>
  * Check if palindrome is valid (comparing only alphanumeric characters lowercase)
  * Solution - two pointers algorithm.
  */
