@@ -20,7 +20,8 @@ class LongestConsecutiveSequenceTest {
     private static Stream<Arguments> longestConsecutive() {
         return Stream.of(
                 Arguments.of(new int[]{100, 4, 200, 1, 3, 2}, 4),
-                Arguments.of(new int[]{0, 3, 7, 2, 5, 8, 4, 6, 0, 1}, 9)
+                Arguments.of(new int[]{0, 3, 7, 2, 5, 8, 4, 6, 0, 1}, 9),
+                Arguments.of(new int[]{1, 2, 0, 1}, 3)
         );
     }
 }

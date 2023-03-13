@@ -6,7 +6,6 @@ import java.util.List;
 
 /**
  * Проверить валидность судоку.
- *
  * Check sudoku validity.
  */
 public class ValidSudoku {
