@@ -10,6 +10,7 @@ import java.util.List;
  * <p>
  * Find all triplets such that add up to 0.
  * Solution - two pointers algorithm
+ * //пробнй коммит
  */
 public class ThreeSum {
 
