@@ -6,10 +6,10 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Дана строка, нужно найти самуд длинную подстроку без повторяющихся символов.
+ * Дана строка, нужно найти длину самой длинной подстроку без повторяющихся символов.
  * Использовать алгоритм slidingWindow - перемещать левый указатель до последнего неповторяющегося символа.
  * <p>
- * Given a string, find longest substring without repeating characters.
+ * Given a string, find the length of the longest substring without repeating characters.
  * Solution - sliding window algorithm. Move a leftPointer to the last not repeating character.
  */
 public class LongestSubstringWithoutRepeatingCharacters {
