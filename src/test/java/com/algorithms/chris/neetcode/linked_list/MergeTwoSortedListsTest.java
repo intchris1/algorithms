@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.algorithms.chris.neetcode.linked_list.MergeTwoSortedLists.ListNode;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class MergeTwoSortedListsTest {
@@ -29,7 +28,7 @@ class MergeTwoSortedListsTest {
     private static Stream<Arguments> mergeTwoSortedLists() {
         return Stream.of(
                 Arguments.of(
-                        new MergeTwoSortedLists.ListNode(1, new ListNode(2, new ListNode(4))),
+                        new ListNode(1, new ListNode(2, new ListNode(4))),
                         new ListNode(1, new ListNode(3, new ListNode(4))),
                         List.of(1, 1, 2, 3, 4, 4)
                 ),

@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static com.algorithms.chris.neetcode.linked_list.ReverseLinkedList.ListNode;
 
 class ReverseLinkedListTest {
 

@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.algorithms.chris.neetcode.linked_list.AddTwoNumbers.ListNode;
+import static com.algorithms.chris.util.TestUtil.listToListNodes;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class AddTwoNumbersTest {
@@ -60,20 +60,5 @@ class AddTwoNumbersTest {
                         List.of(6, 6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1)
                 )
         );
-    }
-
-    private static ListNode listToListNodes(Integer... array) {
-        List<Integer> list = Arrays.asList(array);
-        return listToListNodes(list);
-    }
-
-    private static ListNode listToListNodes(List<Integer> list) {
-        var head = new ListNode();
-        var result = head;
-        for (Integer integer : list) {
-            head.next = new ListNode(integer);
-            head = head.next;
-        }
-        return result.next;
     }
 }
