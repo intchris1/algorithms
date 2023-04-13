@@ -15,8 +15,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 class MinStackTest {
 
     @ParameterizedTest
-    @MethodSource("slidingWindowMaximum")
-    void slidingWindowMaximum(List<String> methodNames, List<Integer> args, List<Integer> expected) {
+    @MethodSource("minStack")
+    void minStack(List<String> methodNames, List<Integer> args, List<Integer> expected) {
         var minStack = new MinStack();
         var result = new ArrayList<>(methodNames.size());
         for (int i = 0; i < methodNames.size(); i++) {
@@ -29,7 +29,7 @@ class MinStackTest {
         assertThat(result).isEqualTo(expected);
     }
 
-    private static Stream<Arguments> slidingWindowMaximum() {
+    private static Stream<Arguments> minStack() {
         return Stream.of(Arguments.of(
                 List.of("push", "push", "push", "getMin", "pop", "top", "getMin"),
                 Arrays.asList(-2, 0, -3, null, null, null, null),
