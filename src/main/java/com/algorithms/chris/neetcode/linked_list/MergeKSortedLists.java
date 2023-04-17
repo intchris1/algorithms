@@ -3,6 +3,13 @@ package com.algorithms.chris.neetcode.linked_list;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * Соединить несколько сортированных связных списков в один сортированный.
+ * Решение - сортировка слиянием. Сначала слить каждые два соседних списка, получившийся список списков прогнать еще раз через слияние.
+ * <p>
+ * Merge k sorted linked lists into one sorted linked list.
+ * Solution - merge sort. First, merge every two lists into one, final list of lists send through merging again.
+ */
 public class MergeKSortedLists {
 
     public static ListNode mergeKLists(ListNode[] lists) {
