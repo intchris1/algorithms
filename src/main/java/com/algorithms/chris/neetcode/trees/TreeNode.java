@@ -1,5 +1,8 @@
 package com.algorithms.chris.neetcode.trees;
 
+import lombok.ToString;
+
+@ToString(exclude = {"left", "right"})
 public class TreeNode {
     int val;
     TreeNode left;
