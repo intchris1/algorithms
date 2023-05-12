@@ -12,24 +12,24 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TrieTest {
+public class WordDictionaryTest {
 
     @ParameterizedTest
-    @MethodSource("trie")
-    void trie(List<String> methodNames, List<String> args, List<Boolean> expected) {
-        var trie = new Trie();
+    @MethodSource("wordDictionary")
+    void wordDictionary(List<String> methodNames, List<String> args, List<Boolean> expected) {
+        var wordDictionary = new WordDictionary();
         var result = new ArrayList<>(methodNames.size());
         for (int i = 0; i < methodNames.size(); i++) {
-            result.add(ReflectionTestUtils.invokeMethod(trie, methodNames.get(i), args.get(i)));
+            result.add(ReflectionTestUtils.invokeMethod(wordDictionary, methodNames.get(i), args.get(i)));
         }
         assertThat(result).isEqualTo(expected);
     }
 
-    private static Stream<Arguments> trie() {
+    private static Stream<Arguments> wordDictionary() {
         return Stream.of(Arguments.of(
-                List.of("insert", "search", "search", "startsWith", "insert", "search"),
-                Arrays.asList("apple", "apple", "app", "app", "app", "app"),
-                Arrays.asList(null, true, false, true, null, true))
+                List.of("addWord", "addWord", "addWord", "search", "search", "search", "search", "search"),
+                Arrays.asList("bad", "dad", "mad", "pad", "bad", ".ad", "b..", "...."),
+                Arrays.asList(null, null, null, false, true, true, true, false))
         );
     }
 }

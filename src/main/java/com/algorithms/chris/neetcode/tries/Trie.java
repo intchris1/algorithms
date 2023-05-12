@@ -15,7 +15,7 @@ public class Trie {
 
     }
 
-    static class TrieNode {
+    private static class TrieNode {
         TrieNode[] next = new TrieNode[26];
         boolean isTheEnd = false;
 
