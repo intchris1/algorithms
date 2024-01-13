@@ -34,4 +34,8 @@ public class TestUtil {
         List<Integer> list = Arrays.asList(array);
         return listToListNodesAsList(list);
     }
+
+    public static Object[] args(Object... args) {
+        return args;
+    }
 }
