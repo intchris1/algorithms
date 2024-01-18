@@ -8,7 +8,8 @@ import static java.util.Collections.emptyList;
 /**
  * Нужно вернуть все возможные подсписки для данного списка чисел.
  * Решение:
- * Для каждого подсписка проходиться по оставшимся впереди числам. Добавлять каждое число. Получившийся подсписок опять прогонять с оставшимися впереи числами (рекурсия).
+ * Для каждого подсписка проходиться по оставшимся впереди числам. Добавлять каждое число.
+ * Получившийся подсписок опять прогонять с оставшимися впереди числами (рекурсия).
  * <p>
  * Return a list of all possible subsets for a given array.
  * Solution: for each subset iterate over numbers ahead of it. Add each number. And use this subset to go over the numbers ahead of it (recursion).
